@@ -595,7 +595,26 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      pinball-parts_0: 2533469206384590020
+      pinball-parts_1: 6044767142118511773
+      pinball-parts_10: -1086491831887979635
+      pinball-parts_11: 2876639123642967440
+      pinball-parts_12: -5573972334933910910
+      pinball-parts_13: 4021294810534032386
+      pinball-parts_14: 8291369034318957158
+      pinball-parts_15: 4314637015133468882
+      pinball-parts_16: 7704890837907527955
+      pinball-parts_17: 2516429242457032466
+      pinball-parts_18: -615890131089194630
+      pinball-parts_2: 6671250488593513503
+      pinball-parts_3: 8393297069285791813
+      pinball-parts_4: -6575024855968922865
+      pinball-parts_5: 5801785226977107894
+      pinball-parts_6: -9070827758443181396
+      pinball-parts_7: -8620844248596647833
+      pinball-parts_8: 3520875185217164391
+      pinball-parts_9: 4174788316372641186
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
