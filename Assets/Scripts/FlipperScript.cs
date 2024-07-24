@@ -12,14 +12,16 @@ public class FlipperScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Filp();
+        if (Input.GetKeyDown(filpKey))
+        {
+            Filp();
+        }
     }
 
     public void Filp()
     {
-        if (Input.GetKeyDown(filpKey))
-        {
+        
             rb.AddTorque(flipperForce);
-        }
+        
     }
 }

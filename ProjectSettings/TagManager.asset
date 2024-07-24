@@ -9,6 +9,7 @@ TagManager:
   - Red
   - Green
   - Blue
+  - Ball Start
   layers:
   - Default
   - TransparentFX
@@ -20,7 +21,7 @@ TagManager:
   - Ball
   - 
   - 
-  - 
+  - startwall
   - 
   - 
   - 

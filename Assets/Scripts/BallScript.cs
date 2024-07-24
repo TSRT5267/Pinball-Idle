@@ -1,10 +1,16 @@
 using UnityEngine;
+using System.Collections;
 
 public class BallScript : MonoBehaviour
 {
-    private void Update()
+    
+
+    void Awake()
     {
-        Physics2D.IgnoreLayerCollision(7,7);
+         
+
+       
+        Physics2D.IgnoreLayerCollision(7, 7); // 공끼리는 서로 충돌X
     }
 
 
@@ -14,6 +20,8 @@ public class BallScript : MonoBehaviour
         {           
             Destroy(gameObject); // 공 제거
         }
+
+        
     }
 
     

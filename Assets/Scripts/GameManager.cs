@@ -1,25 +1,41 @@
 using System.Collections;
+using System.Collections.Generic;
+using System.Xml.Schema;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    public static GameManager instance = null;
+
     [Header("BallSpawner")]
     [SerializeField] private GameObject ballPrefab;
     [SerializeField] private Transform spawnPoint;
     [SerializeField] private float spawnDelay;
     [SerializeField] private float minForce;
     [SerializeField] private float maxForce;
+
+    private int totalMoney;
+    private int maxBall;
+
+    private void Awake()
+    {
+        if (instance == null) //시스템상에 존재하고 있지 않을때
+        {
+            instance = this; //내자신을 instance로 넣어줍니다.
+            DontDestroyOnLoad(gameObject); //OnLoad(씬이 로드 되었을때) 자신을 파괴하지 않고 유지
+        }
+        else
+        {
+            if (instance != this) //instance가 하나 존재
+                Destroy(this.gameObject); //방금 AWake된 자신을 삭제
+        }
+    }
     
-    
-    
-    
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        StartCoroutine(SpawnBallRoutine());
+        
     }
-
-    // Update is called once per frame
+  
     void Update()
     {
         
@@ -34,7 +50,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    void SpawnBall()
+    public void SpawnBall()
     {
         GameObject ball = Instantiate(ballPrefab, spawnPoint.position, spawnPoint.rotation);
         Rigidbody2D rb = ball.GetComponent<Rigidbody2D>();
