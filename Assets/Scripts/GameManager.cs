@@ -13,9 +13,13 @@ public class GameManager : MonoBehaviour
     [SerializeField] private float spawnDelay;
     [SerializeField] private float minForce;
     [SerializeField] private float maxForce;
+    [SerializeField] private int maxBall;
+    private int ballCount;
+    private float spawnTimer;
 
-    private int totalMoney;
-    private int maxBall;
+    [Header("Money")]
+    [SerializeField] private int totalMoney;
+    
 
     private void Awake()
     {
@@ -29,11 +33,14 @@ public class GameManager : MonoBehaviour
             if (instance != this) //instance가 하나 존재
                 Destroy(this.gameObject); //방금 AWake된 자신을 삭제
         }
+
+        Screen.SetResolution(900, 1600, true);
     }
     
     void Start()
     {
-        
+        StartCoroutine(SpawnBallRoutine());
+        spawnTimer = spawnDelay;
     }
   
     void Update()
@@ -46,19 +53,67 @@ public class GameManager : MonoBehaviour
         while (true)
         {
             SpawnBall();
-            yield return new WaitForSeconds(spawnDelay);
+            yield return new WaitForSeconds(spawnTimer);
         }
     }
 
     public void SpawnBall()
     {
-        GameObject ball = Instantiate(ballPrefab, spawnPoint.position, spawnPoint.rotation);
-        Rigidbody2D rb = ball.GetComponent<Rigidbody2D>();
-        if (rb != null)
+        if(ballCount<= maxBall)
         {
-            rb.velocityY =  Random.Range(minForce,maxForce); // 공을 발사하는 속도 설정 (필요에 따라 조정)
+            ballCount++;
+            spawnTimer = spawnDelay;
+            GameObject ball = Instantiate(ballPrefab, spawnPoint.position, spawnPoint.rotation);
+            Rigidbody2D rb = ball.GetComponent<Rigidbody2D>();
+            if (rb != null)
+            {
+                rb.velocityY = Random.Range(minForce, maxForce); // 공을 발사하는 속도 설정 (필요에 따라 조정)
+            }
         }
+        
     }
 
-    
+    public void AddMoney(int money)
+    {
+        totalMoney += money;
+    }
+
+    //------------------------------------------------------------
+
+    public int Money
+    {
+        get
+        {
+            return totalMoney; 
+        }
+        
+    }
+
+    public int BallCount
+    {
+        get
+        {
+            return ballCount; 
+        }
+
+        set
+        {
+            ballCount = value;
+        }
+
+    }
+
+    public int SpawnTimer
+    {
+        get
+        {
+            return ballCount;
+        }
+        set
+        {
+            spawnTimer = value;
+        }
+
+    }
+
 }
