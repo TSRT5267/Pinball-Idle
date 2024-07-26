@@ -6,8 +6,9 @@ public class FlipperScript : MonoBehaviour
     [SerializeField] private KeyCode filpKey;
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private float  flipperForce;
-   
-    
+
+    [Header("AutoFilp")]
+    [SerializeField] private Collider2D autoFilpCol;
 
     // Update is called once per frame
     void Update()

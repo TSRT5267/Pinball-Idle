@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
 
     [Header("BallSpawner")]
     [SerializeField] private GameObject ballPrefab;
+    [SerializeField] private Animator animator;
     [SerializeField] private Transform spawnPoint;
     [SerializeField] private float spawnDelay;
     [SerializeField] private float minForce;
@@ -39,13 +40,22 @@ public class GameManager : MonoBehaviour
     
     void Start()
     {
-        StartCoroutine(SpawnBallRoutine());
-        spawnTimer = spawnDelay;
+        //StartCoroutine(SpawnBallRoutine());
+        
     }
   
     void Update()
     {
-        
+        // 경과한 시간 업데이트
+        spawnTimer += Time.deltaTime;
+
+        // 지정된 시간 간격이 지나면 함수 호출
+        if (spawnTimer >= spawnDelay)
+        {
+            SpawnBall(); // 주기적으로 실행할 함수 호출
+            spawnTimer = 0f; // 타이머 리셋
+            animator.Play("SpawnCool", -1, 0);// 쿨타임 애니메이션 다시시작
+        }
     }
 
     IEnumerator SpawnBallRoutine()
@@ -62,7 +72,6 @@ public class GameManager : MonoBehaviour
         if(ballCount<= maxBall)
         {
             ballCount++;
-            spawnTimer = spawnDelay;
             GameObject ball = Instantiate(ballPrefab, spawnPoint.position, spawnPoint.rotation);
             Rigidbody2D rb = ball.GetComponent<Rigidbody2D>();
             if (rb != null)
@@ -72,6 +81,8 @@ public class GameManager : MonoBehaviour
         }
         
     }
+
+    
 
     public void AddMoney(int money)
     {
@@ -103,15 +114,28 @@ public class GameManager : MonoBehaviour
 
     }
 
-    public int SpawnTimer
+    public float SpawnTimer
     {
         get
         {
-            return ballCount;
+            return spawnTimer;
         }
         set
         {
             spawnTimer = value;
+        }
+
+    }
+
+    public float SpawnDelay
+    {
+        get
+        {
+            return spawnDelay;
+        }
+        set
+        {
+            spawnDelay = value;
         }
 
     }
