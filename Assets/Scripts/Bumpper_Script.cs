@@ -10,4 +10,9 @@ public class Bumpper_Script : MonoBehaviour
     {
         GameManager.instance.AddMoney(MoneyValue);
     }
+
+    public void UpgradeAddMoney(int addvalue)
+    {
+        MoneyValue += addvalue;
+    }
 }

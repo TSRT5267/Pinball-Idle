@@ -394,6 +394,8 @@ MonoBehaviour:
   filpKey: 275
   rb: {fileID: 1070319766135556963}
   flipperForce: -10000
+  filpSound: {fileID: 0}
+  autoFilpCol: {fileID: 0}
 --- !u!1 &5612939009104719439
 GameObject:
   m_ObjectHideFlags: 0

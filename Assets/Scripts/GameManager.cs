@@ -97,6 +97,10 @@ public class GameManager : MonoBehaviour
         {
             return totalMoney; 
         }
+        set
+        {
+            totalMoney = value;
+        }
         
     }
 
