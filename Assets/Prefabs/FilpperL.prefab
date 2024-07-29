@@ -36,7 +36,6 @@ Transform:
   m_Children:
   - {fileID: 3770012599454949424}
   - {fileID: 8302417115006489354}
-  - {fileID: 5528918290323573115}
   m_Father: {fileID: 5319394054329466166}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -30}
 --- !u!212 &1966076285717400353
@@ -228,8 +227,6 @@ MonoBehaviour:
   filpKey: 276
   rb: {fileID: 6682648165868112364}
   flipperForce: 10000
-  filpSound: {fileID: 0}
-  autoFilpCol: {fileID: 0}
 --- !u!1 &2717554372030971347
 GameObject:
   m_ObjectHideFlags: 0
@@ -259,6 +256,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 5528918290323573115}
   - {fileID: 7835004938680307606}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -359,6 +357,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5528918290323573115}
   - component: {fileID: 1499677695853024833}
+  - component: {fileID: 2614211948697661695}
   m_Layer: 6
   m_Name: AutoFilpPos
   m_TagString: Untagged
@@ -374,12 +373,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5777104258493526935}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0.258819, w: 0.9659259}
+  m_LocalPosition: {x: 0.476, y: -0.275, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 7835004938680307606}
+  m_Father: {fileID: 5319394054329466166}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1499677695853024833
 BoxCollider2D:
@@ -411,7 +410,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -427,6 +426,21 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 0.6}
   m_EdgeRadius: 0
+--- !u!114 &2614211948697661695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5777104258493526935}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 244b6dc4f09847947ba224b6fcf2ccf0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flipper: {fileID: 8068811945499454156}
+  onAutoFilp: 0
+  flipCooldown: 0.5
 --- !u!1 &7193864528064942598
 GameObject:
   m_ObjectHideFlags: 0

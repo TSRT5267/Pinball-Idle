@@ -34,7 +34,8 @@ public class BallScript : MonoBehaviour
         if (collision.gameObject.tag == "Ball End")
         {
             GameManager.instance.BallCount--;
-            Destroy(gameObject); // 공 제거
+            //Destroy(gameObject); // 공 제거
+            gameObject.SetActive(false); // 비활성화
         }
 
         

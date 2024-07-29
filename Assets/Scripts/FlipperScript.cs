@@ -8,8 +8,7 @@ public class FlipperScript : MonoBehaviour
     [SerializeField] private float  flipperForce;
     
 
-    [Header("AutoFilp")]
-    [SerializeField] private Collider2D autoFilpCol;
+    
 
     
 
@@ -18,15 +17,21 @@ public class FlipperScript : MonoBehaviour
     {
         if (Input.GetKeyDown(filpKey))
         {
-            Filp();
+            Flip();
             
         }
+
+        
     }
 
-    public void Filp()
+    public void Flip()
     {
         
             rb.AddTorque(flipperForce);
         
     }
+
+
+
+
 }

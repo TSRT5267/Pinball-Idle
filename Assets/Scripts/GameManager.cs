@@ -15,7 +15,10 @@ public class GameManager : MonoBehaviour
     [SerializeField] private float minForce;
     [SerializeField] private float maxForce;
     [SerializeField] private int maxBall;
-    private int ballCount;
+    [SerializeField] private int ballPoolSize;
+    [SerializeField] private Transform ballObjectPool;
+    private List<GameObject> pools = new List<GameObject>(); // 풀
+     private int ballCount=0;
     private float spawnTimer;
 
     [Header("Money")]
@@ -40,10 +43,16 @@ public class GameManager : MonoBehaviour
     
     void Start()
     {
-        //StartCoroutine(SpawnBallRoutine());
-        
+        for (int i = 0; i < ballPoolSize; i++)
+        {
+            GameObject ball = Instantiate(ballPrefab, ballObjectPool);
+            ball.gameObject.SetActive(false);
+            pools.Add(ball);
+        } // 풀 초기화
+
+
     }
-  
+
     void Update()
     {
         // 경과한 시간 업데이트
@@ -55,6 +64,8 @@ public class GameManager : MonoBehaviour
             SpawnBall(); // 주기적으로 실행할 함수 호출
             spawnTimer = 0f; // 타이머 리셋
             animator.Play("SpawnCool", -1, 0);// 쿨타임 애니메이션 다시시작
+
+            
         }
     }
 
@@ -69,14 +80,28 @@ public class GameManager : MonoBehaviour
 
     public void SpawnBall()
     {
-        if(ballCount<= maxBall)
+        if(ballCount < maxBall)
         {
             ballCount++;
-            GameObject ball = Instantiate(ballPrefab, spawnPoint.position, spawnPoint.rotation);
-            Rigidbody2D rb = ball.GetComponent<Rigidbody2D>();
-            if (rb != null)
+            //GameObject ball = Instantiate(ballPrefab, spawnPoint.position, spawnPoint.rotation);
+            //Rigidbody2D rb = ball.GetComponent<Rigidbody2D>();
+            /*if (rb != null)
             {
                 rb.velocityY = Random.Range(minForce, maxForce); // 공을 발사하는 속도 설정 (필요에 따라 조정)
+            }*/
+
+            // 오브젝트 풀링
+            for (int i = 0; i < ballPoolSize; i++)
+            {
+                if (!pools[i].activeInHierarchy) // 하이라키 창에 pools[i]가 비활성화일 때
+                {
+                    
+                    pools[i].transform.position = spawnPoint.position;
+                    pools[i].transform.rotation = spawnPoint.rotation;
+                    pools[i].SetActive(true); // 탄환 사용
+                    pools[i].GetComponent<Rigidbody2D>().velocityY = Random.Range(minForce, maxForce); // 방향
+                    break;
+                }
             }
         }
         

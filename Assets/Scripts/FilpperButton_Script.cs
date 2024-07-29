@@ -9,7 +9,7 @@ public class FilpperButton_Script : MonoBehaviour
 
     private void OnMouseDown()
     {
-        filpper.Filp();
+        filpper.Flip();
         
     }
 

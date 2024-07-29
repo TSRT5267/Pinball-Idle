@@ -3,6 +3,7 @@ using UnityEngine.UI;
 
 public class UpgradeScript : MonoBehaviour
 {
+    [SerializeField] private upgradeList upgradeKind;
     [SerializeField] private Text priceText;
     [SerializeField] private Text valueText;
     [SerializeField] private int startPrice;
@@ -13,6 +14,17 @@ public class UpgradeScript : MonoBehaviour
     private int price;
     private int value;
     private int nextValue;
+
+    enum upgradeList
+    {
+        Bumpper,
+        AutoFilp,
+        MaxBall,
+        FireDelay,
+    }
+    
+
+    
 
     private void Start()
     {
@@ -30,15 +42,28 @@ public class UpgradeScript : MonoBehaviour
 
     public void Upgrade()
     {
-        if (GameManager.instance.Money >= price)
+        if(upgradeKind==upgradeList.Bumpper)
         {
-            GameManager.instance.Money -= price;
-            bumpper.UpgradeAddMoney(addValue);
-            price = Mathf.RoundToInt(price * addPrice);
-            value += addValue;
-            nextValue += addValue;
+            if (GameManager.instance.Money >= price)
+            {
+                GameManager.instance.Money -= price;
+                bumpper.UpgradeAddMoney(addValue);
+                price = Mathf.RoundToInt(price * addPrice);
+                value += addValue;
+                nextValue += addValue;
 
+            }
         }
+        else if(upgradeKind== upgradeList.AutoFilp)
+        {
+            if (GameManager.instance.Money >= price)
+            {
+                GameManager.instance.Money -= price;
+                
+
+            }
+        }
+       
     }
    
 
