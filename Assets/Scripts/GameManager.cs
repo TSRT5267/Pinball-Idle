@@ -57,27 +57,31 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        // 경과한 시간 업데이트
-        spawnTimer += Time.deltaTime;
+        
 
-        // 지정된 시간 간격이 지나면 함수 호출
-        if (spawnTimer >= spawnDelay)
+        if(SceneManager.GetActiveScene().name == "PlayScene")
         {
-            SpawnBall(); // 주기적으로 실행할 함수 호출
-            spawnTimer = 0f; // 타이머 리셋
-            animator.Play("SpawnCool", -1, 0);// 쿨타임 애니메이션 다시시작
-
-            
-        }
-
-        if(SceneManager.GetActiveScene().name == "PlayScene") 
             playTime += Time.deltaTime;
 
-        if (totalMoney >= 100000000)
-        {
-            Debug.Log("dd");
-            SceneManager.LoadScene("ClearScene"); // 게임 클리어
+            // 경과한 시간 업데이트
+            spawnTimer += Time.deltaTime;
+
+            // 지정된 시간 간격이 지나면 함수 호출
+            if (spawnTimer >= spawnDelay)
+            {
+                SpawnBall(); // 주기적으로 실행할 함수 호출
+                spawnTimer = 0f; // 타이머 리셋
+                animator.Play("SpawnCool", -1, 0);// 쿨타임 애니메이션 다시시작
+            }
+
+            if (totalMoney >= 100000000)
+            {
+                SceneManager.LoadScene("ClearScene"); // 게임 클리어
+            }
         }
+            
+
+        
     }
 
     IEnumerator SpawnBallRoutine()

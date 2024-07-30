@@ -7,6 +7,8 @@ public class LobbyScript : MonoBehaviour
     {
         SceneManager.LoadScene("PlayScene");
         GameManager.instance.playTime = 0f;
+        GameManager.instance.Money = 10;
+        
     }
 
     public void GameExit()
