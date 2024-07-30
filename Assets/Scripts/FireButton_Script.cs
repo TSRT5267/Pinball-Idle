@@ -14,6 +14,11 @@ public class FireButton_Script : MonoBehaviour
     {
         animator.speed = 1f / GameManager.instance.SpawnDelay;
 
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            GameManager.instance.SpawnTimer++;
+            SkipAnimationTime();
+        }
     }
 
 
@@ -27,6 +32,7 @@ public class FireButton_Script : MonoBehaviour
 
     }
 
+    
     void SkipAnimationTime()
     {
         // 현재 재생중인 애니메이션 상태 가져오기

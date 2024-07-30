@@ -6,11 +6,13 @@ public class FlipperScript : MonoBehaviour
     [SerializeField] private KeyCode filpKey;
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private float  flipperForce;
-    
+    [SerializeField] private AudioSource collisionSound;
 
-    
 
-    
+
+
+
+
 
     // Update is called once per frame
     void Update()
@@ -28,7 +30,8 @@ public class FlipperScript : MonoBehaviour
     {
         
             rb.AddTorque(flipperForce);
-        
+        collisionSound.Play();
+
     }
 
 

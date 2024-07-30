@@ -130,6 +130,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bumpper4 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4448270124248605428, guid: 23a8cdd21238b2d4db7699ffd42bff9e, type: 3}
+      propertyPath: parentObject
+      value: 
+      objectReference: {fileID: 879256035}
     - target: {fileID: 6407590622562461920, guid: 23a8cdd21238b2d4db7699ffd42bff9e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.0654132
@@ -877,6 +881,22 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.49803922
       objectReference: {fileID: 0}
+    - target: {fileID: 5719397233579328179, guid: 9bdc1ce4eb8fffd4dbd55eae097e2125, type: 3}
+      propertyPath: bumpper
+      value: 
+      objectReference: {fileID: 706889959}
+    - target: {fileID: 5719397233579328179, guid: 9bdc1ce4eb8fffd4dbd55eae097e2125, type: 3}
+      propertyPath: addValue
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5719397233579328179, guid: 9bdc1ce4eb8fffd4dbd55eae097e2125, type: 3}
+      propertyPath: startPrice
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5719397233579328179, guid: 9bdc1ce4eb8fffd4dbd55eae097e2125, type: 3}
+      propertyPath: startValue
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -940,6 +960,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5617583220064279411, guid: 82e77e67ad8e6c944b4c6708d44bcaaf, type: 3}
+      propertyPath: parentObject
+      value: 
+      objectReference: {fileID: 697773232}
     - target: {fileID: 6199185743252802795, guid: 82e77e67ad8e6c944b4c6708d44bcaaf, type: 3}
       propertyPath: m_Name
       value: Bumpper3 (2)
@@ -1163,7 +1187,19 @@ PrefabInstance:
     - target: {fileID: 5719397233579328179, guid: 9bdc1ce4eb8fffd4dbd55eae097e2125, type: 3}
       propertyPath: bumpper
       value: 
-      objectReference: {fileID: 727767483}
+      objectReference: {fileID: 697773232}
+    - target: {fileID: 5719397233579328179, guid: 9bdc1ce4eb8fffd4dbd55eae097e2125, type: 3}
+      propertyPath: addValue
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5719397233579328179, guid: 9bdc1ce4eb8fffd4dbd55eae097e2125, type: 3}
+      propertyPath: startPrice
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 5719397233579328179, guid: 9bdc1ce4eb8fffd4dbd55eae097e2125, type: 3}
+      propertyPath: startValue
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1714,7 +1750,23 @@ PrefabInstance:
     - target: {fileID: 5719397233579328179, guid: 9bdc1ce4eb8fffd4dbd55eae097e2125, type: 3}
       propertyPath: bumpper
       value: 
-      objectReference: {fileID: 727767483}
+      objectReference: {fileID: 0}
+    - target: {fileID: 5719397233579328179, guid: 9bdc1ce4eb8fffd4dbd55eae097e2125, type: 3}
+      propertyPath: addPrice
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5719397233579328179, guid: 9bdc1ce4eb8fffd4dbd55eae097e2125, type: 3}
+      propertyPath: startPrice
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5719397233579328179, guid: 9bdc1ce4eb8fffd4dbd55eae097e2125, type: 3}
+      propertyPath: startValue
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5719397233579328179, guid: 9bdc1ce4eb8fffd4dbd55eae097e2125, type: 3}
+      propertyPath: upgradeKind
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1725,6 +1777,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1713496479658434468, guid: 9bdc1ce4eb8fffd4dbd55eae097e2125, type: 3}
   m_PrefabInstance: {fileID: 402723738}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &423487325 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7878741237331417139, guid: 1666fe28d1ff6474992714f1bd9cc12c, type: 3}
+  m_PrefabInstance: {fileID: 1562421648131934729}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 244b6dc4f09847947ba224b6fcf2ccf0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &432561677
 GameObject:
   m_ObjectHideFlags: 0
@@ -1977,7 +2040,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3559994084728975497, guid: 9bdc1ce4eb8fffd4dbd55eae097e2125, type: 3}
       propertyPath: m_Name
-      value: Ball Max
+      value: Max Ball
       objectReference: {fileID: 0}
     - target: {fileID: 4928380405288031783, guid: 9bdc1ce4eb8fffd4dbd55eae097e2125, type: 3}
       propertyPath: m_Text
@@ -1998,7 +2061,19 @@ PrefabInstance:
     - target: {fileID: 5719397233579328179, guid: 9bdc1ce4eb8fffd4dbd55eae097e2125, type: 3}
       propertyPath: bumpper
       value: 
-      objectReference: {fileID: 727767483}
+      objectReference: {fileID: 0}
+    - target: {fileID: 5719397233579328179, guid: 9bdc1ce4eb8fffd4dbd55eae097e2125, type: 3}
+      propertyPath: addPrice
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5719397233579328179, guid: 9bdc1ce4eb8fffd4dbd55eae097e2125, type: 3}
+      propertyPath: startPrice
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5719397233579328179, guid: 9bdc1ce4eb8fffd4dbd55eae097e2125, type: 3}
+      propertyPath: upgradeKind
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2375,6 +2450,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 987199337}
     m_Modifications:
+    - target: {fileID: 1552403990720881967, guid: 8d78425bab9d3454c9cd0e11cd8b44ab, type: 3}
+      propertyPath: parentObject
+      value: 
+      objectReference: {fileID: 987199338}
     - target: {fileID: 4019565159995239099, guid: 8d78425bab9d3454c9cd0e11cd8b44ab, type: 3}
       propertyPath: m_Name
       value: Bumpper5 (4)
@@ -2559,7 +2638,7 @@ MonoBehaviour:
   maxBall: 1
   ballPoolSize: 20
   ballObjectPool: {fileID: 1111995203}
-  totalMoney: 0
+  totalMoney: 10
 --- !u!4 &593722976
 Transform:
   m_ObjectHideFlags: 0
@@ -2675,6 +2754,7 @@ RectTransform:
   - {fileID: 1487222384}
   - {fileID: 1719880467}
   - {fileID: 1835013935}
+  - {fileID: 1516926308}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -3093,6 +3173,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 987199337}
     m_Modifications:
+    - target: {fileID: 1552403990720881967, guid: 8d78425bab9d3454c9cd0e11cd8b44ab, type: 3}
+      propertyPath: parentObject
+      value: 
+      objectReference: {fileID: 987199338}
     - target: {fileID: 4019565159995239099, guid: 8d78425bab9d3454c9cd0e11cd8b44ab, type: 3}
       propertyPath: m_Name
       value: Bumpper5 (2)
@@ -3158,7 +3242,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &697773231
 Transform:
   m_ObjectHideFlags: 0
@@ -3293,7 +3377,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &706889958
 Transform:
   m_ObjectHideFlags: 0
@@ -3334,6 +3418,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 987199337}
     m_Modifications:
+    - target: {fileID: 1552403990720881967, guid: 8d78425bab9d3454c9cd0e11cd8b44ab, type: 3}
+      propertyPath: parentObject
+      value: 
+      objectReference: {fileID: 987199338}
     - target: {fileID: 4019565159995239099, guid: 8d78425bab9d3454c9cd0e11cd8b44ab, type: 3}
       propertyPath: m_Name
       value: Bumpper5 (1)
@@ -3399,7 +3487,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &727767482
 Transform:
   m_ObjectHideFlags: 0
@@ -3429,7 +3517,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e23896a5c21ce84aa128189bf77c8ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MoneyValue: 1
+  MoneyValue: 0
 --- !u!1 &737709644
 GameObject:
   m_ObjectHideFlags: 0
@@ -3859,7 +3947,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &879256034
 Transform:
   m_ObjectHideFlags: 0
@@ -3890,6 +3978,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MoneyValue: 0
+--- !u!114 &892482320 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2614211948697661695, guid: ad983891ab82b9d44a77addc92d39fd5, type: 3}
+  m_PrefabInstance: {fileID: 6715378182350691003}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 244b6dc4f09847947ba224b6fcf2ccf0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &919211402
 GameObject:
   m_ObjectHideFlags: 0
@@ -3993,7 +4092,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &987199337
 Transform:
   m_ObjectHideFlags: 0
@@ -4277,10 +4376,30 @@ PrefabInstance:
       propertyPath: m_Text
       value: B5 Upgrade
       objectReference: {fileID: 0}
+    - target: {fileID: 4928380405288031783, guid: 9bdc1ce4eb8fffd4dbd55eae097e2125, type: 3}
+      propertyPath: m_Color.b
+      value: 0.79607844
+      objectReference: {fileID: 0}
+    - target: {fileID: 4928380405288031783, guid: 9bdc1ce4eb8fffd4dbd55eae097e2125, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5719397233579328179, guid: 9bdc1ce4eb8fffd4dbd55eae097e2125, type: 3}
       propertyPath: bumpper
       value: 
-      objectReference: {fileID: 727767483}
+      objectReference: {fileID: 987199338}
+    - target: {fileID: 5719397233579328179, guid: 9bdc1ce4eb8fffd4dbd55eae097e2125, type: 3}
+      propertyPath: addValue
+      value: 10000
+      objectReference: {fileID: 0}
+    - target: {fileID: 5719397233579328179, guid: 9bdc1ce4eb8fffd4dbd55eae097e2125, type: 3}
+      propertyPath: startPrice
+      value: 100000
+      objectReference: {fileID: 0}
+    - target: {fileID: 5719397233579328179, guid: 9bdc1ce4eb8fffd4dbd55eae097e2125, type: 3}
+      propertyPath: startValue
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4421,6 +4540,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bumpper2 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5590107733089696404, guid: 72573fd4b054ea248a5fbc9d19ab8380, type: 3}
+      propertyPath: parentObject
+      value: 
+      objectReference: {fileID: 706889959}
     - target: {fileID: 6879509854239460031, guid: 72573fd4b054ea248a5fbc9d19ab8380, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.39214003
@@ -4909,6 +5032,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5617583220064279411, guid: 82e77e67ad8e6c944b4c6708d44bcaaf, type: 3}
+      propertyPath: parentObject
+      value: 
+      objectReference: {fileID: 697773232}
     - target: {fileID: 6199185743252802795, guid: 82e77e67ad8e6c944b4c6708d44bcaaf, type: 3}
       propertyPath: m_Name
       value: Bumpper3 (1)
@@ -6264,6 +6391,87 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1516926307
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1516926308}
+  - component: {fileID: 1516926310}
+  - component: {fileID: 1516926309}
+  m_Layer: 5
+  m_Name: GoalText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1516926308
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1516926307}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 609483713}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -40, y: 100}
+  m_SizeDelta: {x: 200, y: 200}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1516926309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1516926307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.6075471, g: 0.5995229, b: 0.5995229, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 40
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 2
+    m_MaxSize: 50
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: ' GOAL
+
+    1 Million'
+--- !u!222 &1516926310
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1516926307}
+  m_CullTransparentMesh: 1
 --- !u!1 &1526276561
 GameObject:
   m_ObjectHideFlags: 0
@@ -6534,6 +6742,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bumpper2 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 5590107733089696404, guid: 72573fd4b054ea248a5fbc9d19ab8380, type: 3}
+      propertyPath: parentObject
+      value: 
+      objectReference: {fileID: 706889959}
     - target: {fileID: 6879509854239460031, guid: 72573fd4b054ea248a5fbc9d19ab8380, type: 3}
       propertyPath: m_LocalScale.y
       value: 0.26958504
@@ -8442,7 +8654,27 @@ PrefabInstance:
     - target: {fileID: 5719397233579328179, guid: 9bdc1ce4eb8fffd4dbd55eae097e2125, type: 3}
       propertyPath: bumpper
       value: 
-      objectReference: {fileID: 727767483}
+      objectReference: {fileID: 0}
+    - target: {fileID: 5719397233579328179, guid: 9bdc1ce4eb8fffd4dbd55eae097e2125, type: 3}
+      propertyPath: startPrice
+      value: 10000
+      objectReference: {fileID: 0}
+    - target: {fileID: 5719397233579328179, guid: 9bdc1ce4eb8fffd4dbd55eae097e2125, type: 3}
+      propertyPath: startValue
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5719397233579328179, guid: 9bdc1ce4eb8fffd4dbd55eae097e2125, type: 3}
+      propertyPath: autoFliper1
+      value: 
+      objectReference: {fileID: 423487325}
+    - target: {fileID: 5719397233579328179, guid: 9bdc1ce4eb8fffd4dbd55eae097e2125, type: 3}
+      propertyPath: autoFliper2
+      value: 
+      objectReference: {fileID: 892482320}
+    - target: {fileID: 5719397233579328179, guid: 9bdc1ce4eb8fffd4dbd55eae097e2125, type: 3}
+      propertyPath: upgradeKind
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8461,6 +8693,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 987199337}
     m_Modifications:
+    - target: {fileID: 1552403990720881967, guid: 8d78425bab9d3454c9cd0e11cd8b44ab, type: 3}
+      propertyPath: parentObject
+      value: 
+      objectReference: {fileID: 987199338}
     - target: {fileID: 4019565159995239099, guid: 8d78425bab9d3454c9cd0e11cd8b44ab, type: 3}
       propertyPath: m_Name
       value: Bumpper5 (3)
@@ -8527,6 +8763,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bumpper2 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 5590107733089696404, guid: 72573fd4b054ea248a5fbc9d19ab8380, type: 3}
+      propertyPath: parentObject
+      value: 
+      objectReference: {fileID: 706889959}
     - target: {fileID: 6879509854239460031, guid: 72573fd4b054ea248a5fbc9d19ab8380, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.39213997
@@ -8984,10 +9224,34 @@ PrefabInstance:
       propertyPath: m_Text
       value: B4 Upgrade
       objectReference: {fileID: 0}
+    - target: {fileID: 4928380405288031783, guid: 9bdc1ce4eb8fffd4dbd55eae097e2125, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4928380405288031783, guid: 9bdc1ce4eb8fffd4dbd55eae097e2125, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4928380405288031783, guid: 9bdc1ce4eb8fffd4dbd55eae097e2125, type: 3}
+      propertyPath: m_Color.r
+      value: 0.011764706
+      objectReference: {fileID: 0}
     - target: {fileID: 5719397233579328179, guid: 9bdc1ce4eb8fffd4dbd55eae097e2125, type: 3}
       propertyPath: bumpper
       value: 
-      objectReference: {fileID: 727767483}
+      objectReference: {fileID: 879256035}
+    - target: {fileID: 5719397233579328179, guid: 9bdc1ce4eb8fffd4dbd55eae097e2125, type: 3}
+      propertyPath: addValue
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 5719397233579328179, guid: 9bdc1ce4eb8fffd4dbd55eae097e2125, type: 3}
+      propertyPath: startPrice
+      value: 10000
+      objectReference: {fileID: 0}
+    - target: {fileID: 5719397233579328179, guid: 9bdc1ce4eb8fffd4dbd55eae097e2125, type: 3}
+      propertyPath: startValue
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9009,6 +9273,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71b4da37d670740438ee8dd061dc8f3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!82 &2139380875 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 5633615527176403752, guid: ad983891ab82b9d44a77addc92d39fd5, type: 3}
+  m_PrefabInstance: {fileID: 6715378182350691003}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1478506858347362059
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9105,6 +9374,14 @@ PrefabInstance:
       propertyPath: bumpper
       value: 
       objectReference: {fileID: 727767483}
+    - target: {fileID: 5719397233579328179, guid: 9bdc1ce4eb8fffd4dbd55eae097e2125, type: 3}
+      propertyPath: startPrice
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5719397233579328179, guid: 9bdc1ce4eb8fffd4dbd55eae097e2125, type: 3}
+      propertyPath: startValue
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9203,6 +9480,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bumpper2
       objectReference: {fileID: 0}
+    - target: {fileID: 5590107733089696404, guid: 72573fd4b054ea248a5fbc9d19ab8380, type: 3}
+      propertyPath: parentObject
+      value: 
+      objectReference: {fileID: 706889959}
     - target: {fileID: 6879509854239460031, guid: 72573fd4b054ea248a5fbc9d19ab8380, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.39213997
@@ -9332,6 +9613,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 987199337}
     m_Modifications:
+    - target: {fileID: 1552403990720881967, guid: 8d78425bab9d3454c9cd0e11cd8b44ab, type: 3}
+      propertyPath: parentObject
+      value: 
+      objectReference: {fileID: 987199338}
     - target: {fileID: 4019565159995239099, guid: 8d78425bab9d3454c9cd0e11cd8b44ab, type: 3}
       propertyPath: m_Name
       value: Bumpper5
@@ -9429,6 +9714,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5617583220064279411, guid: 82e77e67ad8e6c944b4c6708d44bcaaf, type: 3}
+      propertyPath: parentObject
+      value: 
+      objectReference: {fileID: 697773232}
     - target: {fileID: 6199185743252802795, guid: 82e77e67ad8e6c944b4c6708d44bcaaf, type: 3}
       propertyPath: m_Name
       value: Bumpper3
@@ -9526,6 +9815,10 @@ PrefabInstance:
       propertyPath: flipperForce
       value: 500
       objectReference: {fileID: 0}
+    - target: {fileID: 8068811945499454156, guid: ad983891ab82b9d44a77addc92d39fd5, type: 3}
+      propertyPath: collisionSound
+      value: 
+      objectReference: {fileID: 2139380875}
     - target: {fileID: 8220815031583326798, guid: ad983891ab82b9d44a77addc92d39fd5, type: 3}
       propertyPath: isGlobal
       value: 1
@@ -9555,6 +9848,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bumpper4
       objectReference: {fileID: 0}
+    - target: {fileID: 4448270124248605428, guid: 23a8cdd21238b2d4db7699ffd42bff9e, type: 3}
+      propertyPath: parentObject
+      value: 
+      objectReference: {fileID: 879256035}
     - target: {fileID: 6407590622562461920, guid: 23a8cdd21238b2d4db7699ffd42bff9e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.9345868

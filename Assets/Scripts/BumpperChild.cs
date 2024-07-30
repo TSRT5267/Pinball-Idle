@@ -23,5 +23,15 @@ public class BumpperChild : MonoBehaviour
         }
     }
 
-    
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        // 현재 시간과 마지막 호출 시간 차이가 설정한 간격보다 크면 AddMoney 호출
+        if (Time.time - lastTime >= interval)
+        {
+            parentObject.AddMoney();
+            lastTime = Time.time; // 마지막 호출 시간 업데이트
+        }
+    }
+
+
 }

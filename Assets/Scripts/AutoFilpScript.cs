@@ -28,11 +28,11 @@ public class AutoFilpScript : MonoBehaviour
     {
         get
         {
-            return OnAutoFilp;
+            return onAutoFilp;
         }
         set
         {
-            OnAutoFilp = value;
+            onAutoFilp = value;
         }
 
     }

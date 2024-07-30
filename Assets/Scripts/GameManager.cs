@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Xml.Schema;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -22,8 +23,9 @@ public class GameManager : MonoBehaviour
     private float spawnTimer;
 
     [Header("Money")]
-    [SerializeField] private int totalMoney;
-    
+    [SerializeField] private int totalMoney =1;
+
+    public float playTime;
 
     private void Awake()
     {
@@ -66,6 +68,15 @@ public class GameManager : MonoBehaviour
             animator.Play("SpawnCool", -1, 0);// 쿨타임 애니메이션 다시시작
 
             
+        }
+
+        if(SceneManager.GetActiveScene().name == "PlayScene") 
+            playTime += Time.deltaTime;
+
+        if (totalMoney >= 100000000)
+        {
+            Debug.Log("dd");
+            SceneManager.LoadScene("ClearScene"); // 게임 클리어
         }
     }
 
@@ -165,6 +176,19 @@ public class GameManager : MonoBehaviour
         set
         {
             spawnDelay = value;
+        }
+
+    }
+
+    public int MaxBall
+    {
+        get
+        {
+            return maxBall;
+        }
+        set
+        {
+            maxBall = value;
         }
 
     }
