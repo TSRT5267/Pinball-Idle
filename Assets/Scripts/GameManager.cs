@@ -41,6 +41,7 @@ public class GameManager : MonoBehaviour
         }
 
         Screen.SetResolution(900, 1600, true);
+        Application.targetFrameRate = 60;
     }
     
     void Start()
@@ -74,7 +75,7 @@ public class GameManager : MonoBehaviour
                 animator.Play("SpawnCool", -1, 0);// 쿨타임 애니메이션 다시시작
             }
 
-            if (totalMoney >= 100000000)
+            if (totalMoney >= 10000000)
             {
                 SceneManager.LoadScene("ClearScene"); // 게임 클리어
             }
@@ -122,12 +123,46 @@ public class GameManager : MonoBehaviour
         
     }
 
-    
+    public string ChangeNumber(string number)
+    {
+        char[] unitAlphabet = new char[3] { 'K', 'M', 'B' }; //  k m b  단위 배열
+        int unit = 0;
+        while (number.Length > 6)  // 숫자가 6자리보다 커질시 
+        {
+            unit++; // 단위 증가
+            number = number.Substring(0, number.Length - 3); // 3자리수 단위로 자름
+        }
+        if (number.Length > 3)
+        {
+            int newInt = int.Parse(number); // string -> int
+            if (number.Length > 4)
+            {
+                //              남는 숫자               단위
+                return (newInt / 1000).ToString() + unitAlphabet[unit];
+            }
+            else
+            {       
+                //       남는 숫자 (1자리인 경우 .0추가)       단위
+                return (newInt / 1000f).ToString("0.0") + unitAlphabet[unit];
+            }
+        }
+        else
+        {
+                //숫자가 안크면 그대로 반환
+            int newInt = int.Parse(number);
+            return (newInt).ToString();
+        }
+    }
 
     public void AddMoney(int money)
     {
         totalMoney += money;
     }
+
+
+
+
+
 
     //------------------------------------------------------------
 

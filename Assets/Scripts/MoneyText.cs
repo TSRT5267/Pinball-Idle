@@ -13,6 +13,7 @@ public class MoneyText : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        text.text = GameManager.instance.Money.ToString();
+        text.text = GameManager.instance.ChangeNumber(GameManager.instance.Money.ToString()); 
+        
     }
 }

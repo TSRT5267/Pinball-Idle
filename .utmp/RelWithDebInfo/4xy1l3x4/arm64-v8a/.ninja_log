@@ -1,0 +1,11 @@
+# ninja log v5
+131	814	7440962550900297	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	c74d555940a71c32
+818	1333	7440962555712835	C:/Users/JUN/Documents/GitHub/Pinball-Idle/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/4xy1l3x4/obj/arm64-v8a/libswappywrapper.so	a31cd6d21afad338
+48	2180	7440962564372242	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	d70a7208cc84356d
+85	2343	7440962565499229	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	86c010fbf084a005
+31	2431	7440962566536438	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	24a2d2d282686b50
+106	2483	7440962567643484	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	d94e46e93d376083
+17	2589	7440962568790409	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	88500ff2161178e5
+65	2822	7440962571104200	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	564181d8083ef39
+1	2968	7440962572640079	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	fc07cf8cf259f744
+2969	3220	7440962574924026	C:/Users/JUN/Documents/GitHub/Pinball-Idle/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/4xy1l3x4/obj/arm64-v8a/libgame.so	5ae7087d43ba2828

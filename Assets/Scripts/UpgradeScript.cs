@@ -43,10 +43,11 @@ public class UpgradeScript : MonoBehaviour
 
     private void Update()
     {
-        priceText.text = price.ToString();
+        priceText.text = GameManager.instance.ChangeNumber(price.ToString());
         if (upgradeKind == upgradeList.Bumpper)
         {
-            valueText.text = value.ToString() + " -> " + nextValue.ToString();
+            valueText.text = GameManager.instance.ChangeNumber(value.ToString())  
+                + " -> " + GameManager.instance.ChangeNumber(nextValue.ToString());
         }
         else if(upgradeKind == upgradeList.AutoFilp)
         {
@@ -59,14 +60,16 @@ public class UpgradeScript : MonoBehaviour
         else if (upgradeKind == upgradeList.MaxBall)
         {
             if(value != 20)
-                valueText.text = value.ToString() + " -> " + nextValue.ToString();
+                valueText.text = GameManager.instance.ChangeNumber(value.ToString()) 
+                    + " -> " + GameManager.instance.ChangeNumber(nextValue.ToString());
             else
                 valueText.text = "Max";
         }
         else if (upgradeKind == upgradeList.FireDelay)
         {
             if (value != 1)
-                valueText.text = value.ToString() + " -> " + nextValue.ToString();
+                valueText.text = GameManager.instance.ChangeNumber(value.ToString()) 
+                    + " -> " + GameManager.instance.ChangeNumber(nextValue.ToString());
             else
                 valueText.text = "Max";
         }

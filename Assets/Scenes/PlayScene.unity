@@ -884,7 +884,7 @@ PrefabInstance:
     - target: {fileID: 5719397233579328179, guid: 9bdc1ce4eb8fffd4dbd55eae097e2125, type: 3}
       propertyPath: bumpper
       value: 
-      objectReference: {fileID: 706889959}
+      objectReference: {fileID: 697773232}
     - target: {fileID: 5719397233579328179, guid: 9bdc1ce4eb8fffd4dbd55eae097e2125, type: 3}
       propertyPath: addValue
       value: 10
@@ -1187,7 +1187,7 @@ PrefabInstance:
     - target: {fileID: 5719397233579328179, guid: 9bdc1ce4eb8fffd4dbd55eae097e2125, type: 3}
       propertyPath: bumpper
       value: 
-      objectReference: {fileID: 697773232}
+      objectReference: {fileID: 706889959}
     - target: {fileID: 5719397233579328179, guid: 9bdc1ce4eb8fffd4dbd55eae097e2125, type: 3}
       propertyPath: addValue
       value: 100
@@ -2639,6 +2639,7 @@ MonoBehaviour:
   ballPoolSize: 20
   ballObjectPool: {fileID: 1111995203}
   totalMoney: 10
+  playTime: 0
 --- !u!4 &593722976
 Transform:
   m_ObjectHideFlags: 0
@@ -6461,9 +6462,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: ' GOAL
+  m_Text: 'G O A L
 
-    1 Million'
+    10 M'
 --- !u!222 &1516926310
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -9374,6 +9375,10 @@ PrefabInstance:
       propertyPath: bumpper
       value: 
       objectReference: {fileID: 727767483}
+    - target: {fileID: 5719397233579328179, guid: 9bdc1ce4eb8fffd4dbd55eae097e2125, type: 3}
+      propertyPath: addValue
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 5719397233579328179, guid: 9bdc1ce4eb8fffd4dbd55eae097e2125, type: 3}
       propertyPath: startPrice
       value: 10
