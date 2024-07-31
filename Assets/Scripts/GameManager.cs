@@ -136,13 +136,11 @@ public class GameManager : MonoBehaviour
         {
             int newInt = int.Parse(number); // string -> int
             if (number.Length > 4)
-            {
-                //              남는 숫자               단위
+            {              
                 return (newInt / 1000).ToString() + unitAlphabet[unit];
             }
             else
-            {       
-                //       남는 숫자 (1자리인 경우 .0추가)       단위
+            {                     
                 return (newInt / 1000f).ToString("0.0") + unitAlphabet[unit];
             }
         }

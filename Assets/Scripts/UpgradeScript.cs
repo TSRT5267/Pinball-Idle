@@ -69,7 +69,7 @@ public class UpgradeScript : MonoBehaviour
         {
             if (value != 1)
                 valueText.text = GameManager.instance.ChangeNumber(value.ToString()) 
-                    + " -> " + GameManager.instance.ChangeNumber(nextValue.ToString());
+                    + "s -> " + GameManager.instance.ChangeNumber(nextValue.ToString())+"s";
             else
                 valueText.text = "Max";
         }
@@ -84,11 +84,11 @@ public class UpgradeScript : MonoBehaviour
             {
 
                 GameManager.instance.Money -= price;
-                bumpper.UpgradeAddMoney(addValue);
-                price = Mathf.RoundToInt(price * addPrice);
-                value += addValue;
+                bumpper.UpgradeAddMoney(addValue); 
+                price = Mathf.RoundToInt(price * addPrice); 
+                value += addValue;      
                 nextValue += addValue;
-                if (bumpper.gameObject.activeSelf == false)
+                if (bumpper.gameObject.activeSelf == false) //처음에 비활성화시 구매후 활성화
                     bumpper.gameObject.SetActive(true);
                 collisionSound.Play();
 

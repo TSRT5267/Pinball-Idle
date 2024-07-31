@@ -27,11 +27,9 @@ public class FlipperScript : MonoBehaviour
     }
 
     public void Flip()
-    {
-        
-            rb.AddTorque(flipperForce);
+    {       
+        rb.AddTorque(flipperForce);
         collisionSound.Play();
-
     }
 
 
